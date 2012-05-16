@@ -1,7 +1,7 @@
 === uLogin - виджет авторизации через социальные сети ===
 Donate link: http://ulogin.ru/
 Tags: ulogin, login, social, authorization
-Requires at least: 1.5
+Requires at least: 1.6
 Tested up to: 2.5
 Stable tag: 1.6
 License: GPL3
@@ -17,3 +17,7 @@ uLogin — это инструмент, который позволяет пол
 1. Загрузите модуль через менеджер расширений в админке
 2. Активируйте модуль в менеджере модулей.
 3. Опубликуйте и выберите подходящее место для кнопки.
+
+== Changelog ==
+
+Добавлена регистрация пользователей в компоненте K2
