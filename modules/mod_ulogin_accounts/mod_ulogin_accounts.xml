@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+    client="site">
+	<name>mod_ulogin_accounts</name>
+    <author>uLogin Team</author>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>team@ulogin.ru</authorEmail>
+    <authorUrl>ulogin.ru</authorUrl>
+    <version>1.0.0</version>
+	<description>MOD_ULOGIN_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_ulogin_accounts">mod_ulogin_accounts.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+        <folder>css</folder>
+	</files>
+
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.mod_ulogin_accounts.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.mod_ulogin_accounts.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_ulogin_accounts.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_ulogin_accounts.sys.ini</language>
+    </languages>
+
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+                        name="uloginid"
+                        type="text"
+                        default=""
+                        label="MOD_ULOGIN_FIELD_ULOGINID_LABEL"
+                        description="MOD_ULOGIN_FIELD_ULOGINID_DESC">
+				</field>
+                <field
+                        name="add_str"
+                        type="text"
+                        default="Привяжите аккаунты соцсетей:"
+                        label="MOD_ULOGIN_FIELD_ADD_STR_LABEL">
+                </field>
+                <field
+                        name="delete_str"
+                        type="text"
+                        default="Удалите привязку к аккаунту, кликнув по значку:"
+                        label="MOD_ULOGIN_FIELD_DELETE_STR_LABEL">
+                </field>
+
+            </fieldset>
+        </fields>
+	</config>
+</extension>

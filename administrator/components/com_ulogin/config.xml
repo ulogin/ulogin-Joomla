@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <fieldset
+            name="global"
+            label="JGLOBAL_FIELDSET_OPTIONS"
+            description="COM_ULOGIN_DESC"
+            addfieldpath="/administrator/components/com_ulogin/models/fields">
+        <field
+                name="uloginid"
+                type="text"
+                default=""
+                label="COM_ULOGIN_FIELD_ULOGINID_LABEL"/>
+        <field
+                name="group"
+                type="usergroup"
+                label="COM_ULOGIN_GROUPS_LABEL"
+                filter="intval">
+        </field>
+    </fieldset>
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC"
+            >
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                class="inputbox"
+                validate="rules"
+                filter="rules"
+                component="com_ulogin"
+                section="component"/>
+    </fieldset>
+</config>
