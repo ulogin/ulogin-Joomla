@@ -1,1 +1,0 @@
--- DROP TABLE IF EXISTS `#__ulogin_users`;
