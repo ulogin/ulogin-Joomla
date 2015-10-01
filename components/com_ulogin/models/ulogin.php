@@ -27,7 +27,7 @@ class UloginModelUlogin extends JModelItem
 			'columns' => 'id',
 		);
 		$result = self::query('users', $params)->execute();
-		return $result->num_rows > 0 ? true : false;
+		return @$result->num_rows > 0 ? true : false;
 	}
 
 
@@ -43,7 +43,7 @@ class UloginModelUlogin extends JModelItem
 			'columns' => 'id',
 		);
 		$result = self::query('users', $params)->execute();
-		return $result->num_rows > 0 ? true : false;
+		return @$result->num_rows > 0 ? true : false;
 	}
 
 
