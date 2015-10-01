@@ -137,7 +137,7 @@ class UloginController extends JControllerLegacy {
 				// Верификация аккаунта
 				$this->sendMessage(array (
 					'title' => 'Подтверждение аккаунта.',
-					'msg' => 'Электронный адрес данного аккаунта совпадает с электронным адресом существующего пользователя. ' . '<br>Требуется подтверждение на владение указанным email.',
+					'msg' => 'Электронный адрес данного аккаунта совпадает с электронным адресом существующего пользователя.' . '<br>Требуется подтверждение на владение указанным email.',
 					'script' => array ( 'token' => $this->token ),
 				));
 
@@ -147,12 +147,13 @@ class UloginController extends JControllerLegacy {
 			$other_u = $this->model->getUloginUserItem(array (
 				'user_id' => $user_id,
 			));
+			$other_u = is_array($other_u) ? $other_u : array ();
 			if($other_u) {
 				// Синхронизация аккаунтов
 				if(!$isUserLogined && !isset($u_data['merge_account'])) {
 					$this->sendMessage(array (
 						'title' => 'Синхронизация аккаунтов.',
-						'msg' => 'С данным аккаунтом уже связаны данные из другой социальной сети. ' . '<br>Требуется привязка новой учётной записи социальной сети к этому аккаунту.',
+						'msg' => 'С данным аккаунтом уже связаны данные из другой социальной сети.' . '<br>Требуется привязка новой учётной записи социальной сети к этому аккаунту.',
 						'script' => array ( 'token' => $this->token, 'identity' => $other_u['identity'] ),
 					));
 
@@ -495,6 +496,22 @@ class UloginController extends JControllerLegacy {
 			$this->sendMessage(array (
 				'title' => "Произошла ошибка при авторизации.",
 				'msg' => "В возвращаемых данных отсутствует переменная <b>identity</b>.", 'type' => 'error'
+			));
+
+			return false;
+		}
+		if(!isset($this->u_data['first_name'])) {
+			$this->sendMessage(array (
+				'title' => "Произошла ошибка при авторизации.",
+				'msg' => "В возвращаемых данных отсутствует переменная <b>first_name</b>.", 'type' => 'error'
+			));
+
+			return false;
+		}
+		if(!isset($this->u_data['last_name'])) {
+			$this->sendMessage(array (
+				'title' => "Произошла ошибка при авторизации.",
+				'msg' => "В возвращаемых данных отсутствует переменная <b>last_name</b>.", 'type' => 'error'
 			));
 
 			return false;
