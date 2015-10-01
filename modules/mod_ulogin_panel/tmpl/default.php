@@ -9,3 +9,4 @@ defined('_JEXEC') or die;
 		<div data-uloginid="<?php echo $uloginid;?>" data-ulogin="display=small;fields=first_name,last_name,email;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=<?php echo $redirect;?>;callback=<?php echo $callback;?>"></div>
 	<?php } ?>
 </div>
+<div id="system-message-container"></div>
