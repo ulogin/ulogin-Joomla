@@ -2,10 +2,10 @@
 <extension version="3.2" type="plugin" group="authentication">
     <name>plg_authentication_ulogin</name>
     <author>uLogin Team</author>
-    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <license>GNU General Public License, version 2</license>
     <authorEmail>team@ulogin.ru</authorEmail>
     <authorUrl>ulogin.ru</authorUrl>
-    <version>1.0.0</version>
+    <version>2.0.1</version>
     <description>PLG_AUTH_ULOGIN_XML_DESCRIPTION</description>
     <files>
         <filename plugin="ulogin">ulogin.php</filename>
