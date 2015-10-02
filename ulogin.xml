@@ -5,8 +5,8 @@
 	<author>uLogin Team</author>
 	<authorEmail>team@ulogin.ru</authorEmail>
 	<authorUrl>ulogin.ru</authorUrl>
-	<license>GPLv2 or later</license>
-	<version>2.0.0</version>
+	<license>GNU General Public License, version 2</license>
+	<version>2.0.1</version>
 	<description>COM_ULOGIN_DESC_SHORT</description>
 
     <scriptfile>script.php</scriptfile>
