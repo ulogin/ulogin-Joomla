@@ -105,7 +105,7 @@ if (isset($_POST['token'])) {
                         
                         //========================K2 user registration parameters=========================//
                         if (JComponentHelper::isEnabled('com_k2' , true)){
-                            $avatar =  $data['photo'];
+                            $avatar =  !empty($data['photo']) ? $data['photo'] : $data['photo_big'];
                             JRequest::setVar('K2UserForm', 1);
                             JRequest::setVar('gender',$data['sex'] == '2' ? 'm' : 'f');
                             JRequest::setVar('url',$data['identity']);
@@ -148,10 +148,11 @@ if (isset($_POST['token'])) {
 	$ulogin_counter++;
 	if ($user->get('guest')) {
 		$instance = &JURI::getInstance();
-		if($ulogin_counter==1) echo '<script src="http://ulogin.ru/js/ulogin.js"></script>';
-		echo    '<a href="#" id="uLogin_'.$ulogin_counter.'" x-ulogin-params="display=window&'.
-			'fields=first_name,last_name,nickname,photo,email,sex&'.
-			'redirect_uri='.urlencode($instance->toString()).'">'.
-                        '<img src="http://ulogin.ru/img/button.png" style = "width:187;height:30" /></a>';
+        if($ulogin_counter==1)
+            echo '<script src="http://ulogin.ru/js/ulogin.js"></script>';
+            echo '<a href="#" id="uLogin_'.$ulogin_counter.'" x-ulogin-params="display=window&'.
+                'fields=first_name,last_name,nickname,photo,email,sex&'.
+                'redirect_uri='.urlencode($instance->toString()).'">'.
+                '<img src="http://ulogin.ru/img/button.png" style = "width:187;height:30" /></a>';
 	}
 }
