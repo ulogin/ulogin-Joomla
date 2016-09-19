@@ -174,8 +174,13 @@ class UloginController extends JControllerLegacy {
 		$users_model = $this->getModel('Registration');
 		$u_data = $this->u_data;
 		$login = $this->generateNickname($u_data['first_name'], $u_data['last_name'], isset($u_data['nickname']) ? $u_data['nickname'] : '', isset($u_data['bdate']) ? $u_data['bdate'] : '');
-		$CMSuser = array (
-			'name' => $login, 'username' => $login, 'email' => $u_data['email'],
+
+        $username = $u_data['first_name'] . ' ' . $u_data['last_name'];
+        $username = trim($username);
+        $username = empty($username) ? $login : $username;
+
+        $CMSuser = array (
+			'name' => $login, 'username' => $username, 'email' => $u_data['email'],
 			'verified_email' => isset($u_data["verified_email"]) ? $u_data["verified_email"] : -1,
 		);
 		jimport('joomla.application.component.helper');
