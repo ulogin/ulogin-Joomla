@@ -180,7 +180,9 @@ class UloginController extends JControllerLegacy {
         $username = empty($username) ? $login : $username;
 
         $CMSuser = array (
-			'name' => $login, 'username' => $username, 'email' => $u_data['email'],
+			'name' => $username,
+            'username' => $login,
+            'email' => $u_data['email'],
 			'verified_email' => isset($u_data["verified_email"]) ? $u_data["verified_email"] : -1,
 		);
 		jimport('joomla.application.component.helper');
