@@ -1,9 +1,9 @@
 === uLogin - виджет авторизации через социальные сети ===
 Donate link: http://ulogin.ru/
 Tags: ulogin, login, social, authorization
-Requires at least: 1.6
-Tested up to: 2.5
-Stable tag: 1.6
+Requires at least: 3.1
+Tested up to: 4.0
+Stable tag: 4.0
 License: GPL3
 Форма авторизации uLogin через социальные сети. Улучшенный аналог loginza.
 
@@ -20,4 +20,4 @@ uLogin — это инструмент, который позволяет пол
 
 == Changelog ==
 
-Добавлена регистрация пользователей в компоненте K2
+Модуль обновлен до Joomla 4.0
